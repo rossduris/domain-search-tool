@@ -36,7 +36,31 @@ const handleSubmit = (e) => {
   });
 }
 
+const domainList =  [
+  "google.com",
+  "abc.com",
+  "google.uk",
+  "google.us",
+  'speedtrain.coffee',
+  'guavasoup.com',
+  'riftphase.ai',
+  'fusionmonkey.co',
+  'perfectsetup.trade',
+  'prailinetown.com',
+  'perfectstuff.org',
+  'hariyplanet.com'
+]
+
+const [whoisData, setWhoisData] = useState(JSON)
+
+
+
   const entries = Object.entries(searchResults)
+  const whoEntries = Object.entries(whoisData)
+
+  whoEntries.map((entry) => {
+    console.log(entry)
+  })
 
   return (
     <div className="App">
@@ -50,6 +74,12 @@ const handleSubmit = (e) => {
         {entries.map((entry) => {
           const {domain, status} = entry[1][0]
           return(<div key={domain}>{domain} {status}</div>)
+        })}
+       </div>
+       <div>
+        {whoEntries.map((entry) => {
+          const {results} = entry[1]
+          return(<div>{entry[1].length}</div>)
         })}
        </div>
       </header>
