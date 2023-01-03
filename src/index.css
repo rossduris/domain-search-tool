@@ -11,9 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1{
+  color:white;
+  font-size: 44px;
+}
 
 .searchBox{
   padding: 10px;
   border-radius: 5px;
   border: none;
+}
+
+.autolist {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  max-height: 300px;
+  overflow: scroll;
+  border-radius: 10px;
+  background: #fff;
+  color: black;
+  list-style: none;
+  text-align: left;
+  width: 200px;
+  position: absolute;
+  right: 44px;
+  top: 170px;
+  left: 5px;
+}
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+}
+.mainWrapper{
+  position: relative;
+  margin-top: -100px;
+}
+.results{
+  color:white;
+  padding: 20px;
+  font-size: 20px;
+}
+.searchForm button{
+  all:unset;
+  background-color: rgb(38, 167, 154);
+  border:1px solid gray;
+  padding:8px;
+  margin:10px;
+  border-radius: 5px;
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.searchForm button:hover{
+  background-color: rgb(54, 200, 186);
+
 }
